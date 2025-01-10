@@ -434,8 +434,16 @@ function getIdentityMatrix(/* n */) {
  *    getIndicesOfOddNumbers([2, 4, 6, 8, 10]) => []
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
-function getIndicesOfOddNumbers(/* numbers */) {
-  throw new Error('Not implemented');
+function getIndicesOfOddNumbers(numbers) {
+  return numbers
+    .map((item, index) => {
+      if (item % 2 !== 0) {
+        return index;
+      }
+
+      return null;
+    })
+    .filter((item) => item !== null);
 }
 
 /**
